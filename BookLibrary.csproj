@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8FA2B27-2EE0-44B4-ACA5-7B58545F69D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BookLibrary</RootNamespace>
+    <AssemblyName>BookLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
+      <HintPath>..\Things\BunifuCrack-main\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Books\Controls\ctrlBookCover.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Books\Controls\ctrlBookCover.Designer.cs">
+      <DependentUpon>ctrlBookCover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\Controls\ctrlBookInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Books\Controls\ctrlBookInfo.Designer.cs">
+      <DependentUpon>ctrlBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\frmAddEditBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\frmAddEditBook.Designer.cs">
+      <DependentUpon>frmAddEditBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\frmListBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\frmListBooks.Designer.cs">
+      <DependentUpon>frmListBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\frmShowBookInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\frmShowBookInfo.Designer.cs">
+      <DependentUpon>frmShowBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrowings\Controls\ctrlBorrowedBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Borrowings\Controls\ctrlBorrowedBook.Designer.cs">
+      <DependentUpon>ctrlBorrowedBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrowings\frmBorrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrowings\frmBorrowBook.Designer.cs">
+      <DependentUpon>frmBorrowBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrowings\frmListBorrowingRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrowings\frmListBorrowingRecords.Designer.cs">
+      <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\DropShadow.cs" />
+    <Compile Include="Fines\frmFines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fines\frmFines.Designer.cs">
+      <DependentUpon>frmFines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyBooks\frmListMyBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyBooks\frmListMyBooks.Designer.cs">
+      <DependentUpon>frmListMyBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\Controls\ctrlUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Controls\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmSignUp.Designer.cs">
+      <DependentUpon>frmSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmListUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmListUsers.Designer.cs">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmShowUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmShowUserInfo.Designer.cs">
+      <DependentUpon>frmShowUserInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Books\Controls\ctrlBookCover.resx">
+      <DependentUpon>ctrlBookCover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\Controls\ctrlBookInfo.resx">
+      <DependentUpon>ctrlBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\frmAddEditBook.resx">
+      <DependentUpon>frmAddEditBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\frmListBooks.resx">
+      <DependentUpon>frmListBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\frmShowBookInfo.resx">
+      <DependentUpon>frmShowBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrowings\Controls\ctrlBorrowedBook.resx">
+      <DependentUpon>ctrlBorrowedBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrowings\frmBorrowBook.resx">
+      <DependentUpon>frmBorrowBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrowings\frmListBorrowingRecords.resx">
+      <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fines\frmFines.resx">
+      <DependentUpon>frmFines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyBooks\frmListMyBooks.resx">
+      <DependentUpon>frmListMyBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Users\Controls\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmSignUp.resx">
+      <DependentUpon>frmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmListUsers.resx">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmShowUserInfo.resx">
+      <DependentUpon>frmShowUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BusinessLayer\BusinessLayer.csproj">
+      <Project>{ac579fe2-7b10-458c-97c7-f839c87f61ad}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-of-black-cover-closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-with-a-pencil-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ink-pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quantity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man_avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman_avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date-of-birth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male-and-female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow_book2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punishment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punishment %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
